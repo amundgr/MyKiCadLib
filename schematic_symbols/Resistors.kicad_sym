@@ -45,7 +45,7 @@
     (property "Value" "R_0804" (at 0 0 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at -1.778 0 90)
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at -1.778 0 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 0 0 0)
