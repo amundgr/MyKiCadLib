@@ -12,13 +12,11 @@
     (property "Datasheet" "https://d3uzseaevmutz1.cloudfront.net/pubs/proDatasheet/CS4344-45-48_F2.pdf" (at 0 0 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (symbol "CS4344_0_1"
+    (symbol "CS4344_1_1"
       (rectangle (start -7.62 12.7) (end 7.62 -12.7)
         (stroke (width 0) (type default))
-        (fill (type none))
+        (fill (type background))
       )
-    )
-    (symbol "CS4344_1_1"
       (pin input line (at -8.89 6.35 0) (length 1.27)
         (name "SDIN" (effects (font (size 1.27 1.27))))
         (number "1" (effects (font (size 0.762 0.762))))
