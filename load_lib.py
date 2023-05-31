@@ -1,7 +1,6 @@
 import sys
 import os
 import glob 
-import re
 
 if len(sys.argv) > 1:
     project_path = sys.argv[1]
@@ -15,9 +14,9 @@ symbole_file_string = (
 "  (version 7)\n")
 
 cwd = os.getcwd()
-for filename in glob.glob("schematic_symbols/*"):
+for filename in glob.glob(os.path.join("schematic_symbols","*")):
     if filename.endswith(".kicad_sym"):
-        name = filename.split("/")[-1].split(".")[0]
+        name = os.path.basename(filename)
         path = os.path.join(cwd, filename)
 
         symbole_file_string += f'  (lib (name "{name}")(type "KiCad")(uri "{path}")(options "")(descr ""))\n'
@@ -34,9 +33,9 @@ footprint_file_string = (
 )
 
 cwd = os.getcwd()
-for filename in glob.glob("footprints/*"):
+for filename in glob.glob(os.path.join("footprints","*")):
     if filename.endswith(".pretty"):
-        name = filename.split("/")[-1].split(".")[0]
+        name = os.path.basename(filename)
         path = os.path.join(cwd, filename)
         
         footprint_file_string += f'  (lib (name "{name}")(type "KiCad")(uri "{path}")(options "")(descr ""))\n'
