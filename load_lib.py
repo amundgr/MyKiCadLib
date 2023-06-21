@@ -39,6 +39,9 @@ for filename in glob.glob(os.path.join("footprints","*")):
         name = os.path.basename(filename)
         path = os.path.join(cwd, filename)
         
+        if name.endswith(".pretty"):
+            name = name.split(".")[0]
+
         footprint_file_string += f'  (lib (name "{name}")(type "KiCad")(uri "{path}")(options "")(descr ""))\n'
 
 footprint_file_string += ")"

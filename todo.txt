@@ -1,0 +1,5 @@
+fix pad problem on flash.
+pin 10 and 23 on USB hub.
+footprint redriver. 
+pin 3 LM4040 diode.
+pin 1, 10, 33, 42, 49, 50, 22 RP2040.
